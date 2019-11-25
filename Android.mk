@@ -14,25 +14,12 @@
 # limitations under the License.
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := sakura
+LOCAL_PATH := $(call my-dir)
 
-$(call inherit-product, build/target/product/embedded.mk)
+ifeq ($(TARGET_DEVICE), sakura)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+include $(call all-makefiles-under,$(LOCAL_PATH))
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.keystore=msm8953 \
-    ro.treble.enabled=true
+include $(CLEAR_VARS)
 
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.bootimage.build.date.utc \
-    ro.build.date.utc
-
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := sakura
-PRODUCT_NAME := omni_sakura
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 6 pro
-PRODUCT_MANUFACTURER := Xiaomi
+endif
