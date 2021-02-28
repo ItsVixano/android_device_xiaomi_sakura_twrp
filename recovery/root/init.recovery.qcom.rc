@@ -40,13 +40,6 @@ on fs
 on boot
     setprop sys.usb.config none
     setprop sys.usb.config adb
-    # For generic DT2W
-    chown system system /dev/input/event1
-    chown system system /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/fts_gesture_mode
-    chmod 0644 /dev/input/event1
-    chmod 0644 /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/fts_gesture_mode
-    write /dev/input/event1 1
-    write /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/fts_gesture_mode 1
 
 on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
