@@ -1,11 +1,11 @@
-# android_device_xiaomi_ysl
+# android_device_xiaomi_sakura
 
-For building TWRP for Xiaomi Redmi S2/Y2
+For building TWRP for Xiaomi Redmi 6 pro
 
 To compile:
 
 ```
-. build/envsetup.sh && breakfast ysl eng && mka recoveryimage
+. build/envsetup.sh && breakfast sakura eng && mka recoveryimage
 ```
 
-Kernel source: [ItsVixano/android_kernel_xiaomi_ysl](https://github.com/ItsVixano/android_kernel_xiaomi_ysl/tree/twrp)
+Kernel source: [TWRP-Mi-A2-Lite/twrp_kernel_xiaomi_daisy](https://github.com/TWRP-Mi-A2-Lite/twrp_kernel_xiaomi_daisy)
