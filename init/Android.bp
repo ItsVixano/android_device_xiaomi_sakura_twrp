@@ -5,10 +5,10 @@
 //
 
 cc_library_static {
-    name: "libinit_ysl",
+    name: "libinit_sakura",
     include_dirs: [
         "system/core/base/include",
         "system/core/init",
     ],
-    srcs: ["init_ysl.cpp"],
+    srcs: ["init_sakura.cpp"],
 }
